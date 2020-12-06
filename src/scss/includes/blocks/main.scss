@@ -1,0 +1,16 @@
+.main{
+    background-image: url(/src/img/bg-main.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    .main-text{
+        padding-left: 79px;
+        padding-bottom: 216px;
+    }
+    .main-bottom-logo{
+        position: absolute;
+        right: 0;
+        height: 478px;
+    }
+}

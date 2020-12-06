@@ -1,0 +1,34 @@
+.advantages-section {
+    background-color: #FFB3D7;
+
+    .advantages-header {
+        text-align: center;
+    }
+
+    .advantages-item {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .bg-rotate {
+            position: relative;
+            z-index: 3;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 630px;
+                height: 485px;
+                background-color: #FFD900;
+                transform: rotate(45deg);
+                z-index:1;
+            }
+        }
+
+        .metas {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+    }
+}

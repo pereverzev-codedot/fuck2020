@@ -24,12 +24,14 @@
 
 .container {
 	margin: auto;
-	max-width: 1230px;
-	padding: 0 24px;
+	max-width: 1260px;
 	width: 100%;
 	
 	@include desktop {
-		padding: 0 15px;
+		max-width: 1260;
+	}
+	@include desktop-extra{
+		max-width: 1260px;
 	}
 }
 

@@ -1,18 +1,24 @@
 // General
 @import 'includes/base/vars';
 @import 'includes/base/mixins';
-//@import 'includes/base/fonts';
+@import 'includes/base/fonts';
 @import 'includes/base/utils';
 @import 'includes/base/global';
 
 // Blocks
 //@import 'includes/blocks/*';
-
+@import 'includes/blocks/main.scss';
+@import 'includes/blocks/benefits.scss';
+@import 'includes/blocks/product.scss';
+@import 'includes/blocks/advantages.scss';
+@import 'includes/blocks/testimonials.scss';
+@import 'includes/blocks/featured-prod.scss';
+@import 'includes/blocks/newsletter.scss';
 // Vendor
 //@import 'includes/vendor/**/*';
 
 // Templates
-@import 'templates/*';
+//@import 'templates/*';
 
 // Core Templates
 @import 'footer.scss';

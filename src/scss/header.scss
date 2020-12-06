@@ -1,1 +1,35 @@
-.header {}
+header {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    color: #fff;
+
+    .header-wrapper {
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            position: relative;
+        }
+
+        .logo-bottom {
+            position: absolute;
+            left: 21px;
+            top: 10px
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+        }
+
+        .icons {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

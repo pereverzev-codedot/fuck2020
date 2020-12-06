@@ -1,0 +1,21 @@
+.testimonial{
+    background-color: #FF7F00;
+    .testimonial-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 120px;
+        .testimonial-item{
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        height: 403px;
+        width: 30%;
+        .img{
+            width: 116px;
+            height: 116px;
+            border-radius: 60px;
+        }
+        }
+    }
+}
