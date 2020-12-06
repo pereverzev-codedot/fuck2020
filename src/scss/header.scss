@@ -3,13 +3,14 @@ header {
     top: 0%;
     width: 100%;
     color: #fff;
+    z-index: 10;
 
     .header-wrapper {
         height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include tablet{
+        @include tablet(){
            height: 100px;
         }
 
@@ -23,19 +24,108 @@ header {
             top: 10px
         }
 
-        .navigation {
-            display: flex;
-            justify-content: space-between;
-            width: 450px;
-            @include tablet{
-                width: 250px;
+
+        .gamburgmenu {
+            position: relative;
+            display: block;
+            padding: 20px 0 20px 0;
+            z-index: 100;
+
+            @include tablet() {
+                order: 0;
+
+                .gamburger_img {
+                    display: none;
+                }
+            }
+
+
+            &:hover .gamburgmenu_drop {
+                display: block;
+                width: 100px;
+
+                @include tablet() {
+                    width: 100%;
+                    display: flex;
+                    width: 400px;
+                }
+            }
+
+
+            .gamburgmenu_drop {
+                display: none;
+                position: absolute;
+                padding-top: 15px;
+                background-color: rgb(68, 68, 68);
+                z-index: 1;
+                margin-top: 15px;
+                left: -20px;
+                padding-right: 50px;
+                margin-right: 0px;
+                padding-top: 0px;
+                padding-left: 0px;
+                width: 30px;
+                
+
+                @include tablet() {
+                    display: flex;
+                    background-color: transparent;
+                    height: 40px;
+                    width: 100%;
+                    position: static;
+                    padding: 0;
+                    margin: 0;
+                    width: 300px;
+                }
+
+
+                .gamburger_logo {
+                    font-size: 20px;
+                    color: white;
+                    font-weight: bold;
+
+                    @include tablet() {
+                        display: none;
+                    }
+                }
+                .hr {
+                    margin: 0;
+                    padding-left: 0px;
+                    display: table;
+                    width: 10%;
+                    justify-content: space-around;
+                    li{
+                        padding: 10px;
+                    }
+                    a{
+                        color: #ffffff;
+                    }
+                    a:hover{
+                        color: $links-hover-color;
+                    }
+
+                    @include tablet() {
+                        display: flex;
+                        width: 400px;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        font-size: 20px;
+                    }
             }
         }
+    
+    }
 
         .icons {
-            width: 200px;
+            width: 100px;
             display: flex;
             justify-content: space-between;
+            @include tablet(){
+                width: 150px;
+            }
+            @include desktop(){
+                width: 200px;
+            }
         }
     }
 }

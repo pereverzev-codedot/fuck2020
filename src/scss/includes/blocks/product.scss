@@ -3,8 +3,12 @@
 
     .product-row {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        @include tablet{
+            flex-direction: row;
+        }
         .meta {
             text-align: left;
             display: flex;

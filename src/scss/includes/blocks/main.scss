@@ -4,6 +4,7 @@
     background-position: center;
     background-size: cover;
     color: #fff;
+    position: relative;
     .main-text{
         padding-left: 30px;
         padding-bottom: 216px;
@@ -17,7 +18,13 @@
     .main-bottom-logo{
         position: absolute;
         right: 0;
-        bottom: -250px;
+        bottom: -30%;
         height: 478px;
+        @include tablet{
+            bottom:-30%
+        }
+        @include desktop{
+            bottom: -20%;
+        }
     }
 }

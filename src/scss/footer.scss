@@ -8,26 +8,41 @@
     .top-footer {
         border-bottom: 2px solid rgba(255, 255, 255, 0.4);
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include tablet{
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         .logo {
             position: relative;
             padding-top: 50px;
+            padding-bottom: 20px;
+            @include tablet{
+                padding-bottom: 0px;
+            }
+            .logo-bottom {
+                position: absolute;
+                left: 21px;
+                top: 60px
+            }
         }
 
-        .logo-bottom {
-            position: absolute;
-            left: 21px;
-            top: 60px
-        }
+
 
         .footer-nav {
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: space-between;
-            width: 446px;
+            width: 100px;
             font-weight: 900;
             @include tablet{
+                align-items: flex-start;
                 flex-direction: row;
+                width: 400px;
             }
 
             ul {
