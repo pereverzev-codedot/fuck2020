@@ -1,34 +1,60 @@
 .advantages-section {
     background-color: #FFB3D7;
+    font-size: 10px;
 
     .advantages-header {
         text-align: center;
+        padding-bottom: 50px;
+        @include tablet{
+            font-size: 30px;
+        }
     }
 
     .advantages-item {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-        padding-top: 50px;
-        padding-bottom: 50px;
-
-        .bg-rotate {
-            position: relative;
-            z-index: 3;
-            &::before {
-                content: "";
-                position: absolute;
-                width: 630px;
-                height: 485px;
-                background-color: #FFD900;
-                transform: rotate(45deg);
-                z-index:1;
-            }
+        padding-bottom: 120px;
+        @include desktop{
+            flex-direction: row;
+            align-items: stretch;
         }
 
-        .metas {
+        .bg-rotate {
+            display: inline-block; /* Строчно-блочный элемент */
+            position: relative; /* Относительное позиционирование */
+            width: 290px;
+            @include tablet{
+                width: 630px;
+            }
+            & img{
+                display: block;
+                z-index: 1;
+            }
+            &::after {
+                content: ''; /* Выводим рамку */
+                position: absolute; /* Абсолютное позиционирование */
+                left: 0; top: 0; /* Положение */
+                width: 100%; height: 100%; /* Размеры */
+                transform: rotate(-3deg); /* Поворачиваем */
+                background: $img-border-color; /* Цвет внутренней рамки */
+                border: 2px solid $img-border-color; /* Параметры рамки */
+                box-sizing: border-box; /* Не учитываем padding */
+               }
+        }
+
+        &__metas {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            width: 40%;
+            order: 1;
+            @include desktop{
+                order: 0;
+            }
+           ul{
+               list-style: url(/src/img/li-mark.svg);
+           }
         }
     }
 }

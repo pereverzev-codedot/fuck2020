@@ -3,21 +3,27 @@
     text-align: center;
     .row{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        @include desktop{
+            flex-direction: row;
+        }
         &__item{
             display: flex;
             flex-direction: column;
             padding-top: 60px;
-            padding-bottom: 155px;
+            padding-bottom: 75px;
             justify-content: center;
             align-items: center;
+           @include desktop{
+               padding-bottom: 155px;
+           }
             .product{
                 z-index: 2;
             }
             &__metas{
                 height: 180px ;
-                width: 414px ;
+                width: 314px ;
                 background-color:#FFD900;
                 border-radius: 103px;
                 font-size: 24px;
@@ -26,6 +32,10 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                @include tablet{
+                    width: 414px;
+                }
                 h3{
                     margin: 0;
                 }

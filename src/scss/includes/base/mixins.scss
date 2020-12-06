@@ -55,6 +55,11 @@
 		@content;
 	}
 }
+@mixin desktop-medium {
+	@media (min-width: $desktop-medium){
+		@content;
+	}
+}
 
 @mixin desktop() {
 	@media (min-width: $desktop) {

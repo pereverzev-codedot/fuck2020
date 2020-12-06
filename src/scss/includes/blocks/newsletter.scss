@@ -11,22 +11,36 @@
         padding-top: 226px;
         align-items: center;
         text-align: center;
-        p{
-            width: 555px;
-            font-size: 24px;
+
+        p {
+            width: 300px;
+            font-size: 16px;
+            @include tablet{
+                width: 555px;
+                font-size: 24px;
+            }
         }
+        
     }
-    form{
+
+    form {
         display: flex;
         margin-top: 33px;
         margin-bottom: 226px;
+
         input {
             background-color: transparent;
-            width: 302px;
-            font-size: 20px;
-            height: 76px;
+            width: 150px;
+            height: 40px;
+            font-size: 16px;
             border: 4px solid #FFFFFF;
             color: #fff;
+
+            @include tablet {
+                width: 294px;
+                height: 76px;
+                font-size: 20px;
+            }
         }
-    } 
+    }
 }

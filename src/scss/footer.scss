@@ -1,8 +1,14 @@
 .footer {
     background-color: #FF7F00;
-    height: 350px;
+    height: 650px;
+    @include tablet{
+        height: 400px;
+    }
 
     .top-footer {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: space-between;
         .logo {
             position: relative;
             padding-top: 50px;
@@ -14,29 +20,46 @@
             top: 60px
         }
 
-        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-        display: flex;
-        justify-content: space-between;
-
         .footer-nav {
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             width: 446px;
             font-weight: 900;
+            @include tablet{
+                flex-direction: row;
+            }
 
             ul {
                 line-height: 44px;
-                padding-top: 56px;
-                padding-bottom: 30px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                @include tablet{
+                    padding-top: 56px;
+                    padding-bottom: 30px;
+                }
             }
         }
     }
 
     .bottom-footer {
+        .socials{
+            border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+            @include tablet{
+                border-bottom: 0;
+            }
+        }
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         align-items: center;
         padding-top: 10px;
-        height: 70px;
+        height: 100px;
+        @include tablet{
+            flex-direction: row;
+            height: 120px;
+            padding-top: 50px;
+            padding-bottom: 30px;
+        }
     }
 }

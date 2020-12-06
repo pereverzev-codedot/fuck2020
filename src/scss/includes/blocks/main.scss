@@ -5,12 +5,19 @@
     background-size: cover;
     color: #fff;
     .main-text{
-        padding-left: 79px;
+        padding-left: 30px;
         padding-bottom: 216px;
+        @include tablet{
+            padding-left: 79px;
+        }
+        p{
+            padding-bottom: 40px;
+        }
     }
     .main-bottom-logo{
         position: absolute;
         right: 0;
+        bottom: -250px;
         height: 478px;
     }
 }
