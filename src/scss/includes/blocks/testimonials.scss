@@ -8,23 +8,49 @@
         padding-bottom: 120px;
         @include desktop{
         flex-direction: row;
-        padding-bottom: 150px;
-
+        padding-bottom: 40px;
         }
         .testimonial-item{
         padding-top: 40px;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 403px;
         width: 90%;
+        z-index: 2;
         @include desktop{
+            height: 500px;
             width: 30%;
+            align-items: flex-start
+           
+        }
+        &::after{
+            content: " ";
+            position: absolute;
+            background-color:#FFD900;
+            width: 100%;
+            height: 320px;
+            z-index: -1;
+
+            @include desktop(){
+                height: 377px;
+                top: 25%;
+                left: 10%;
+            }
+            @include desktop-medium(){
+                height: 320px;
+            }
+
         }
         .img{
             width: 116px;
             height: 116px;
             border-radius: 60px;
+        }
+        
+        h3{
+         margin: 5px;   
         }
         }
     }
