@@ -61,6 +61,8 @@ p{
 
 a:hover{
 color: $links-hover-color;
+fill: $links-hover-color;
+stroke: $links-hover-color;
 }
 
 .btn{
