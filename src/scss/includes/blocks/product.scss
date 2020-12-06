@@ -1,6 +1,19 @@
 .product-section {
     background-color: #FF7F00;
 
+    .image{
+        position: relative;
+        .cost{
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            @include desktop(){
+                bottom: -30%;
+                left: 0%;
+            }
+        }
+    }
+
     .product-row {
         display: flex;
         flex-direction: column;
