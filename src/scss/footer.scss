@@ -1,16 +1,11 @@
 .footer {
     background-color: #FF7F00;
-    height: 650px;
-    @include tablet{
-        height: 400px;
-    }
 
     .top-footer {
         border-bottom: 2px solid rgba(255, 255, 255, 0.4);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         @include tablet{
             flex-direction: row;
             justify-content: space-between;
@@ -18,15 +13,16 @@
         }
         .logo {
             position: relative;
-            padding-top: 50px;
+            padding-top: 58px;
+            padding-left: 5px;
             padding-bottom: 20px;
             @include tablet{
                 padding-bottom: 0px;
             }
             .logo-bottom {
                 position: absolute;
-                left: 21px;
-                top: 60px
+                left: 29px;
+                top: 69px
             }
         }
 
@@ -34,24 +30,30 @@
 
         .footer-nav {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            width: 100px;
+            width: 90%;
             font-weight: 900;
+            align-self: center;
             @include tablet{
                 align-items: flex-start;
                 flex-direction: row;
-                width: 400px;
+                width: 413px;
             }
 
             ul {
                 line-height: 44px;
                 padding-top: 5px;
                 padding-bottom: 5px;
+                letter-spacing: 1.1px;
                 @include tablet{
-                    padding-top: 56px;
-                    padding-bottom: 30px;
+                    padding-top: 54px;
+                    padding-bottom: 32px;
+                }
+                li{
+                    font-weight: 900;
+                    font-size: 20px;
                 }
             }
         }
@@ -59,6 +61,7 @@
 
     .bottom-footer {
         .socials{
+            height: 30px;
             display: flex;
             justify-content: space-between;
             width:  320px;
@@ -70,20 +73,27 @@
                 width: 150px;
             }
             @include desktop(){
-             width: 320px;   
+             width: 207px;
             }
         }
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-top: 10px;
         height: 100px;
         @include tablet{
             flex-direction: row;
-            height: 120px;
-            padding-top: 50px;
-            padding-bottom: 30px;
+            height: 86px;
+        }
+        .copyright{
+            p{
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                @include tablet(){
+                    text-align: end;
+                }
+            }
         }
     }
 }

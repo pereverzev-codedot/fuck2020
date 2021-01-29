@@ -1,30 +1,38 @@
 .benefits-section{
     display: flex;
     flex-direction: column;
-    background-color: #FFB3D7;
+    background-color: $section-pink;
+    h2{
+        padding-top: 102px;
+    }
     .benefits-row{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-top: 51px;
-        padding-bottom: 113px;
+        padding-top: 36px;
+        padding-bottom: 101px;
+        padding-left: 50px;
+        padding-right: 50px;
         @include tablet{
             flex-direction: row;
         }
         .benefits-item{
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            height: 250px;
+            align-items: center;
             width: 313px;
             text-align: center;
-            @include tablet{
-                height: 257px;
-                width: 413;
-            }
             img{
                 height: 99px;
+                width: 99px;
+            }
+            h3{
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            p{
+
             }
         }
     }

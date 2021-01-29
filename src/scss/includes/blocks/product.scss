@@ -1,15 +1,46 @@
 .product-section {
-    background-color: #FF7F00;
+    background-color: $section-orange;
 
-    .image{
+    .image {
         position: relative;
-        .cost{
+        padding-top: 9px;
+        padding-left: 32px;
+        z-index: 1;
+
+        .cost {
             position: absolute;
             bottom: -50%;
             left: -10%;
-            @include desktop(){
+
+            @include desktop() {
                 bottom: -30%;
-                left: 0%;
+                left: 14%;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            display: none;
+            content: url("/src/img/product_bg.svg");
+            z-index: -1;
+            @include tablet(){
+                display: block;
+                left: -135px;
+                top: -192px;
+                scale: 1.05;
+            }
+            @include desktop{
+                top: -178px;
+                scale: 1.29;
+            }
+            @include desktop-medium(){
+                top: -165px;
+                scale: 1.04;
+            }
+            @include desktop-extra(){
+                scale: 1;
+                top: -166px;
+                left: -79px;
             }
         }
     }
@@ -19,17 +50,36 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        @include tablet{
+
+        @include tablet {
             flex-direction: row;
         }
+
         .meta {
             text-align: left;
             display: flex;
+            width: 100%;
             flex-direction: column;
-            width: 50%;
-            padding-bottom: 90px;
-            h2{
+            padding-bottom: 93px;
+            z-index: 1;
+            @include tablet {
+                width: 49%;
+            }
+
+            h2 {
                 text-align: left;
+                padding-bottom: 40px;
+            }
+
+            h3 {
+                font-size: 20px;
+                padding-top: 2px;
+                padding-bottom: 14px;
+            }
+
+            p {
+                padding-bottom: 45px;
+                line-height: 26px;
             }
         }
     }

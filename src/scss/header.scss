@@ -10,121 +10,159 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        @include tablet(){
-           height: 100px;
+
+        @include tablet() {
+            height: 98px;
         }
 
         .logo {
             position: relative;
-        }
-
+            width: 140px;
+            height: 40px;
+            
         .logo-bottom {
             position: absolute;
-            left: 21px;
-            top: 10px
+            left: 29px;
+            top: 14px
+        }
+        .logo-top{
+            position: absolute;
+            left: 5px;
+            top: 9px
+        }
         }
 
 
-        .gamburgmenu {
-            position: relative;
-            display: block;
-            padding: 20px 0 20px 0;
-            z-index: 100;
-
-            @include tablet() {
-                order: 0;
-
-                .gamburger_img {
-                    display: none;
-                }
+        .header-right {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            align-items: center;
+            @include desktop{
+                width: 85%;
+                justify-content:space-between;
+            }
+            @include desktop-medium{
+                width: 74%;
             }
 
 
-            &:hover .gamburgmenu_drop {
+            .gamburgmenu {
+                position: relative;
                 display: block;
-                width: 100px;
+                padding: 20px 0 20px 0;
+                z-index: 100;
+                order: 1;
 
-                @include tablet() {
-                    width: 100%;
-                    display: flex;
-                    width: 400px;
-                }
-            }
+                @include desktop() {
+                    order: 0;
 
-
-            .gamburgmenu_drop {
-                display: none;
-                position: absolute;
-                padding-top: 15px;
-                background-color: rgb(68, 68, 68);
-                z-index: 1;
-                margin-top: 15px;
-                left: -20px;
-                padding-right: 50px;
-                margin-right: 0px;
-                padding-top: 0px;
-                padding-left: 0px;
-                width: 30px;
-                
-
-                @include tablet() {
-                    display: flex;
-                    background-color: transparent;
-                    height: 40px;
-                    width: 100%;
-                    position: static;
-                    padding: 0;
-                    margin: 0;
-                    width: 300px;
-                }
-
-
-                .gamburger_logo {
-                    font-size: 20px;
-                    color: white;
-                    font-weight: bold;
-
-                    @include tablet() {
+                    .gamburger_img {
                         display: none;
                     }
                 }
-                .hr {
-                    margin: 0;
+
+
+                &:hover .gamburgmenu_drop {
+                    display: block;
+                    @include desktop() {
+                        width: 100%;
+                        display: flex;
+                    }
+                }
+
+
+                .gamburgmenu_drop {
+                    display: none;
+                    position: absolute;
+                    background-color: rgba(68, 68, 68,0.5);
+                    z-index: 1;
+                    margin-top: 15px;
+                    margin-right: 0px;
+                    padding-top: 0px;
                     padding-left: 0px;
-                    display: table;
-                    width: 10%;
-                    justify-content: space-around;
-                    li{
-                        padding: 10px;
+                    right: -20px;
+
+
+                    @include desktop() {
+                        display: flex;
+                        background-color: transparent;
+                        height: 40px;
+                        width: 100%;
+                        position: static;
+                        padding: 0;
+                        margin: 0;
                     }
-                    a{
-                        color: #ffffff;
+
+
+                    .gamburger_logo {
+                        font-size: 20px;
+                        color: white;
+                        font-weight: bold;
+
+                        @include tablet() {
+                            display: none;
+                        }
                     }
-                    a:hover{
-                        color: $links-hover-color;
+
+                    .hr {
+                        margin: 0;
+                        padding-left: 0px;
+                        display: table;
+                        width: 10%;
+                        justify-content: space-around;
+
+                        li {
+                            padding: 10px;
+                            font-size: 20px;
+                            font-weight: 900;
+                        }
+
+                        a {
+                            color: #ffffff;
+                        }
+
+                        a:hover {
+                            color: $links-hover-color;
+                        }
+
+                        @include desktop() {
+                            display: flex;
+                            width: 543px;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 20px;
+                            padding-left: 106px;
+                        }
                     }
+                }
+
+            }
+
+            .icons {
+                width: 100px;
+                display: flex;
+                justify-content: space-between;
+                padding-right: 20px;
+
+                .icons-cart-account {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 50px;
 
                     @include tablet() {
-                        display: flex;
-                        width: 400px;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        font-size: 20px;
+                        width: 78px;
                     }
-            }
-        }
-    
-    }
+                }
 
-        .icons {
-            width: 100px;
-            display: flex;
-            justify-content: space-between;
-            @include tablet(){
-                width: 150px;
-            }
-            @include desktop(){
-                width: 200px;
+                @include tablet() {
+                    width: 250px;
+                }
+
+                @include desktop() {
+                    width: 211px;
+                    padding-right: 0px;
+                }
             }
         }
     }

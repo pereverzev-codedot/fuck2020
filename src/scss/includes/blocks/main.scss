@@ -1,30 +1,37 @@
-.main{
+.main {
     background-image: url(/src/img/bg-main.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     color: #fff;
     position: relative;
-    .main-text{
-        padding-left: 30px;
+
+    .main-text {
         padding-bottom: 216px;
-        @include tablet{
-            padding-left: 79px;
-        }
-        p{
-            padding-bottom: 40px;
+
+        p {
+            font-size: 27px;
+            line-height: 32px;
+            padding-bottom: 49px;
+            padding-top: 23px;
+            max-width: 573px;
         }
     }
-    .main-bottom-logo{
+
+    .main-bottom-logo {
         position: absolute;
         right: 0;
-        bottom: -30%;
-        height: 478px;
-        @include tablet{
-            bottom:-30%
+        bottom: -22%;
+        height: 329px;
+
+
+        @include tablet {
+            bottom: -38%;
+            height: 662px;
         }
-        @include desktop{
-            bottom: -20%;
+
+        @include desktop {
+            bottom: -32%;
         }
     }
 }

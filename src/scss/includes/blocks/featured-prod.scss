@@ -1,30 +1,53 @@
-.featured-products{
-    background-color: #FFB3D7;
-    text-align: center;
-    .row{
+.featured-products {
+    &__header {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        @include desktop{
-            flex-direction: row;
+        align-items: center;
+
+        h2 {
+            padding-top: 111px;
+            padding-bottom: 25px;
         }
-        &__item{
+
+        h3 {
+            text-transform: none;
+            font-size: 24px;
+            line-height: 31px;
+            max-width: 555px;
+        }
+    }
+
+    background-color:$section-pink;
+    text-align: center;
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 44px;
+        padding-bottom: 44px;
+
+        @include desktop {
+            flex-direction: row;
+            padding-bottom: 154px;
+        }
+
+        &__item {
             display: flex;
             flex-direction: column;
-            padding-top: 60px;
-            padding-bottom: 75px;
             justify-content: center;
             align-items: center;
-           @include desktop{
-               padding-bottom: 155px;
-           }
-            .product{
+
+            @include desktop {}
+
+            .product {
                 z-index: 2;
             }
-            &__metas{
-                height: 180px ;
-                width: 314px ;
-                background-color:#FFD900;
+
+            &__metas {
+                height: 120px;
+                width: 214px;
+                background-color: #FFD900;
                 border-radius: 103px;
                 font-size: 24px;
                 display: flex;
@@ -33,11 +56,23 @@
                 justify-content: center;
                 align-items: center;
 
-                @include tablet{
+                @include tablet {
+                    height: 170px;
                     width: 414px;
                 }
                 h3{
-                    margin: 0;
+                    padding-top: 12px;
+                }
+                p {
+                    padding-top: 0px;
+                    padding-bottom: 0;
+                    text-transform: none;
+                    font-size: 16px;
+                    line-height: 32px;
+                    font-weight: 900;
+                    @include tablet(){
+                        font-size: 24px;
+                    }
                 }
             }
         }
